@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CCE55BA27976BB900E03C5E /* Sneakers_MarketPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */; };
+		5CCE55BC27976BB900E03C5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55BB27976BB900E03C5E /* ContentView.swift */; };
+		5CCE55BE27976BC200E03C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE55BD27976BC200E03C5E /* Assets.xcassets */; };
+		5CCE55C127976BC200E03C5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE55C027976BC200E03C5E /* Preview Assets.xcassets */; };
+		5CCE55CB27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55CA27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift */; };
+		5CCE55D527976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55D427976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift */; };
+		5CCE55D727976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CCE55C727976BC200E03C5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCE55AE27976BB900E03C5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCE55B527976BB900E03C5E;
+			remoteInfo = "Sneakers-MarketPlace";
+		};
+		5CCE55D127976BC200E03C5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCE55AE27976BB900E03C5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCE55B527976BB900E03C5E;
+			remoteInfo = "Sneakers-MarketPlace";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5CCE55B627976BB900E03C5E /* Sneakers-MarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakers-MarketPlace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceApp.swift; sourceTree = "<group>"; };
+		5CCE55BB27976BB900E03C5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CCE55BD27976BC200E03C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CCE55C027976BC200E03C5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CCE55C627976BC200E03C5E /* Sneakers-MarketPlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sneakers-MarketPlaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCE55CA27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceTests.swift; sourceTree = "<group>"; };
+		5CCE55D027976BC200E03C5E /* Sneakers-MarketPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sneakers-MarketPlaceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCE55D427976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceUITests.swift; sourceTree = "<group>"; };
+		5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CCE55B327976BB900E03C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCE55C327976BC200E03C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCE55CD27976BC200E03C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CCE55AD27976BB900E03C5E = {
+			isa = PBXGroup;
+			children = (
+				5CCE55B827976BB900E03C5E /* Sneakers-MarketPlace */,
+				5CCE55C927976BC200E03C5E /* Sneakers-MarketPlaceTests */,
+				5CCE55D327976BC200E03C5E /* Sneakers-MarketPlaceUITests */,
+				5CCE55B727976BB900E03C5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CCE55B727976BB900E03C5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55B627976BB900E03C5E /* Sneakers-MarketPlace.app */,
+				5CCE55C627976BC200E03C5E /* Sneakers-MarketPlaceTests.xctest */,
+				5CCE55D027976BC200E03C5E /* Sneakers-MarketPlaceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CCE55B827976BB900E03C5E /* Sneakers-MarketPlace */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */,
+				5CCE55BB27976BB900E03C5E /* ContentView.swift */,
+				5CCE55BD27976BC200E03C5E /* Assets.xcassets */,
+				5CCE55BF27976BC200E03C5E /* Preview Content */,
+			);
+			path = "Sneakers-MarketPlace";
+			sourceTree = "<group>";
+		};
+		5CCE55BF27976BC200E03C5E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55C027976BC200E03C5E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CCE55C927976BC200E03C5E /* Sneakers-MarketPlaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55CA27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift */,
+			);
+			path = "Sneakers-MarketPlaceTests";
+			sourceTree = "<group>";
+		};
+		5CCE55D327976BC200E03C5E /* Sneakers-MarketPlaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55D427976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift */,
+				5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */,
+			);
+			path = "Sneakers-MarketPlaceUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CCE55B527976BB900E03C5E /* Sneakers-MarketPlace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CCE55DA27976BC200E03C5E /* Build configuration list for PBXNativeTarget "Sneakers-MarketPlace" */;
+			buildPhases = (
+				5CCE55B227976BB900E03C5E /* Sources */,
+				5CCE55B327976BB900E03C5E /* Frameworks */,
+				5CCE55B427976BB900E03C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sneakers-MarketPlace";
+			productName = "Sneakers-MarketPlace";
+			productReference = 5CCE55B627976BB900E03C5E /* Sneakers-MarketPlace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CCE55C527976BC200E03C5E /* Sneakers-MarketPlaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CCE55DD27976BC200E03C5E /* Build configuration list for PBXNativeTarget "Sneakers-MarketPlaceTests" */;
+			buildPhases = (
+				5CCE55C227976BC200E03C5E /* Sources */,
+				5CCE55C327976BC200E03C5E /* Frameworks */,
+				5CCE55C427976BC200E03C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CCE55C827976BC200E03C5E /* PBXTargetDependency */,
+			);
+			name = "Sneakers-MarketPlaceTests";
+			productName = "Sneakers-MarketPlaceTests";
+			productReference = 5CCE55C627976BC200E03C5E /* Sneakers-MarketPlaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5CCE55CF27976BC200E03C5E /* Sneakers-MarketPlaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CCE55E027976BC200E03C5E /* Build configuration list for PBXNativeTarget "Sneakers-MarketPlaceUITests" */;
+			buildPhases = (
+				5CCE55CC27976BC200E03C5E /* Sources */,
+				5CCE55CD27976BC200E03C5E /* Frameworks */,
+				5CCE55CE27976BC200E03C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CCE55D227976BC200E03C5E /* PBXTargetDependency */,
+			);
+			name = "Sneakers-MarketPlaceUITests";
+			productName = "Sneakers-MarketPlaceUITests";
+			productReference = 5CCE55D027976BC200E03C5E /* Sneakers-MarketPlaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CCE55AE27976BB900E03C5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					5CCE55B527976BB900E03C5E = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					5CCE55C527976BC200E03C5E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 5CCE55B527976BB900E03C5E;
+					};
+					5CCE55CF27976BC200E03C5E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 5CCE55B527976BB900E03C5E;
+					};
+				};
+			};
+			buildConfigurationList = 5CCE55B127976BB900E03C5E /* Build configuration list for PBXProject "Sneakers-MarketPlace" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CCE55AD27976BB900E03C5E;
+			productRefGroup = 5CCE55B727976BB900E03C5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CCE55B527976BB900E03C5E /* Sneakers-MarketPlace */,
+				5CCE55C527976BC200E03C5E /* Sneakers-MarketPlaceTests */,
+				5CCE55CF27976BC200E03C5E /* Sneakers-MarketPlaceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CCE55B427976BB900E03C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCE55C127976BC200E03C5E /* Preview Assets.xcassets in Resources */,
+				5CCE55BE27976BC200E03C5E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCE55C427976BC200E03C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCE55CE27976BC200E03C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CCE55B227976BB900E03C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCE55BC27976BB900E03C5E /* ContentView.swift in Sources */,
+				5CCE55BA27976BB900E03C5E /* Sneakers_MarketPlaceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCE55C227976BC200E03C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCE55CB27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CCE55CC27976BC200E03C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CCE55D727976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift in Sources */,
+				5CCE55D527976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CCE55C827976BC200E03C5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CCE55B527976BB900E03C5E /* Sneakers-MarketPlace */;
+			targetProxy = 5CCE55C727976BC200E03C5E /* PBXContainerItemProxy */;
+		};
+		5CCE55D227976BC200E03C5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CCE55B527976BB900E03C5E /* Sneakers-MarketPlace */;
+			targetProxy = 5CCE55D127976BC200E03C5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5CCE55D827976BC200E03C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CCE55D927976BC200E03C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CCE55DB27976BC200E03C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sneakers-MarketPlace/Preview Content\"";
+				DEVELOPMENT_TEAM = 553MPC6J36;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sneakers-MarketPlace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CCE55DC27976BC200E03C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sneakers-MarketPlace/Preview Content\"";
+				DEVELOPMENT_TEAM = 553MPC6J36;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sneakers-MarketPlace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CCE55DE27976BC200E03C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 553MPC6J36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sneakers-MarketPlaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sneakers-MarketPlace.app/Sneakers-MarketPlace";
+			};
+			name = Debug;
+		};
+		5CCE55DF27976BC200E03C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 553MPC6J36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sneakers-MarketPlaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sneakers-MarketPlace.app/Sneakers-MarketPlace";
+			};
+			name = Release;
+		};
+		5CCE55E127976BC200E03C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 553MPC6J36;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sneakers-MarketPlaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Sneakers-MarketPlace";
+			};
+			name = Debug;
+		};
+		5CCE55E227976BC200E03C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 553MPC6J36;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sneakers-MarketPlaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Sneakers-MarketPlace";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CCE55B127976BB900E03C5E /* Build configuration list for PBXProject "Sneakers-MarketPlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCE55D827976BC200E03C5E /* Debug */,
+				5CCE55D927976BC200E03C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CCE55DA27976BC200E03C5E /* Build configuration list for PBXNativeTarget "Sneakers-MarketPlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCE55DB27976BC200E03C5E /* Debug */,
+				5CCE55DC27976BC200E03C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CCE55DD27976BC200E03C5E /* Build configuration list for PBXNativeTarget "Sneakers-MarketPlaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCE55DE27976BC200E03C5E /* Debug */,
+				5CCE55DF27976BC200E03C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CCE55E027976BC200E03C5E /* Build configuration list for PBXNativeTarget "Sneakers-MarketPlaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CCE55E127976BC200E03C5E /* Debug */,
+				5CCE55E227976BC200E03C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CCE55AE27976BB900E03C5E /* Project object */;
+}
