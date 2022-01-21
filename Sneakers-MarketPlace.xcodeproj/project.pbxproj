@@ -14,6 +14,10 @@
 		5CCE55CB27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55CA27976BC200E03C5E /* Sneakers_MarketPlaceTests.swift */; };
 		5CCE55D527976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55D427976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift */; };
 		5CCE55D727976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */; };
+		5CCE55E5279ACA7A00E03C5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5CCE55E4279ACA7A00E03C5E /* FirebaseAuth */; };
+		5CCE55E7279ACA7A00E03C5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CCE55E6279ACA7A00E03C5E /* FirebaseFirestore */; };
+		5CCE55E9279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5CCE55E8279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta */; };
+		5CCE55EB279ACAD800E03C5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,7 @@
 		5CCE55D027976BC200E03C5E /* Sneakers-MarketPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sneakers-MarketPlaceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCE55D427976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceUITests.swift; sourceTree = "<group>"; };
 		5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCE55E9279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				5CCE55E5279ACA7A00E03C5E /* FirebaseAuth in Frameworks */,
+				5CCE55E7279ACA7A00E03C5E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,7 @@
 		5CCE55B827976BB900E03C5E /* Sneakers-MarketPlace */ = {
 			isa = PBXGroup;
 			children = (
+				5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */,
 				5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */,
 				5CCE55BB27976BB900E03C5E /* ContentView.swift */,
 				5CCE55BD27976BC200E03C5E /* Assets.xcassets */,
@@ -143,6 +152,11 @@
 			dependencies = (
 			);
 			name = "Sneakers-MarketPlace";
+			packageProductDependencies = (
+				5CCE55E4279ACA7A00E03C5E /* FirebaseAuth */,
+				5CCE55E6279ACA7A00E03C5E /* FirebaseFirestore */,
+				5CCE55E8279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = "Sneakers-MarketPlace";
 			productReference = 5CCE55B627976BB900E03C5E /* Sneakers-MarketPlace.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 5CCE55AD27976BB900E03C5E;
+			packageReferences = (
+				5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 5CCE55B727976BB900E03C5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +250,7 @@
 			files = (
 				5CCE55C127976BC200E03C5E /* Preview Assets.xcassets in Resources */,
 				5CCE55BE27976BC200E03C5E /* Assets.xcassets in Resources */,
+				5CCE55EB279ACAD800E03C5E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +623,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CCE55E4279ACA7A00E03C5E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5CCE55E6279ACA7A00E03C5E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5CCE55E8279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CCE55AE27976BB900E03C5E /* Project object */;
 }

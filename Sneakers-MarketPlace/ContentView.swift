@@ -6,16 +6,36 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    
+    var db = Firestore.firestore()
+
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button(action: {
+            saveToFireStore()
+        }, label: {
+            Text("Save")
+        })
     }
+    
+    func saveToFireStore() {
+        
+        db.collection("tmp").addDocument(data: ["name":"Amir"])
+        
+    }
+    
+    
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_Previews:
+    PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+
+
