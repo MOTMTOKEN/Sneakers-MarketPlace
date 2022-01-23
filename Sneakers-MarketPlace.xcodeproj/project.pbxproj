@@ -18,6 +18,8 @@
 		5CCE55E7279ACA7A00E03C5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5CCE55E6279ACA7A00E03C5E /* FirebaseFirestore */; };
 		5CCE55E9279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5CCE55E8279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta */; };
 		5CCE55EB279ACAD800E03C5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */; };
+		5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55EF279DCCD900E03C5E /* Home.swift */; };
+		5CCE55F2279DCD2200E03C5E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		5CCE55D427976BC200E03C5E /* Sneakers_MarketPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceUITests.swift; sourceTree = "<group>"; };
 		5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5CCE55EF279DCCD900E03C5E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,9 @@
 		5CCE55B827976BB900E03C5E /* Sneakers-MarketPlace */ = {
 			isa = PBXGroup;
 			children = (
+				5CCE55EE279DCC8600E03C5E /* ViewModel */,
+				5CCE55ED279DCC2E00E03C5E /* Model */,
+				5CCE55EC279DCC1900E03C5E /* View */,
 				5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */,
 				5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */,
 				5CCE55BB27976BB900E03C5E /* ContentView.swift */,
@@ -134,6 +141,29 @@
 				5CCE55D627976BC200E03C5E /* Sneakers_MarketPlaceUITestsLaunchTests.swift */,
 			);
 			path = "Sneakers-MarketPlaceUITests";
+			sourceTree = "<group>";
+		};
+		5CCE55EC279DCC1900E03C5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55EF279DCCD900E03C5E /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CCE55ED279DCC2E00E03C5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CCE55EE279DCC8600E03C5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCE55BC27976BB900E03C5E /* ContentView.swift in Sources */,
+				5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */,
 				5CCE55BA27976BB900E03C5E /* Sneakers_MarketPlaceApp.swift in Sources */,
+				5CCE55F2279DCD2200E03C5E /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

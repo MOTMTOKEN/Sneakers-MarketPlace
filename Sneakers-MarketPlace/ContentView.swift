@@ -14,18 +14,10 @@ struct ContentView: View {
 
     
     var body: some View {
-        Button(action: {
-            saveToFireStore()
-        }, label: {
-            Text("Save")
-        })
+        Home()
     }
     
-    func saveToFireStore() {
-        
-        db.collection("tmp").addDocument(data: ["name":"Amir"])
-        
-    }
+    
     
     
 }
