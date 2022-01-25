@@ -8,35 +8,84 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @StateObject var HomeModel = HomeViewModel()
+    
     var body: some View {
         
-        VStack(spacing: 10) {
+        ZStack {
             
-            HStack(spacing: 15) {
+            VStack(spacing: 10) {
                 
-                Button(action: {
+                HStack(spacing: 15) {
                     
-                }, label: {
-                    Image(systemName: "line.horizontal.3")
-                        .font(.title)
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "line.horizontal.3")
+                            .font(.title)
+                            .foregroundColor(.pink)
+                    })
+                    
+                    
+                    Text(HomeModel.userLocation == nil ? "Locating..." : "Location is;")
+                        .foregroundColor(.black)
+                    
+                    Text(HomeModel.userAdress)
+                        .font(.caption)
+                        .fontWeight(.heavy)
                         .foregroundColor(.pink)
-                })
+                    
+                    Spacer(minLength: 0)
+                    
+                }.padding([.horizontal, .top])
                 
+                Divider()
                 
-                Text("Current location is:")
+                HStack(spacing: 15){
+                    
+                    TextField("Search for Sneakers", text: $HomeModel.search)
+                    
+                    if HomeModel.search != "" {
+                        
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "magnifyingglass")
+                                .font(.title2)
+                                .foregroundColor(.red)
+                        }).animation(.easeIn)
+                        
+                    }
+                    
+                }.padding(.horizontal)
+                    .padding(.top, 10)
+                
+                Divider()
+                
+                Spacer()
+            }
+            
+            // non closable alert if permission denied
+            
+            if HomeModel.noLocation {
+                Text("Please enable location access in setting to move on!")
                     .foregroundColor(.black)
-                
-                Text("Location")
-                    .font(.caption)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.pink)
-                
-            }.padding([.horizontal, .top])
+                    .frame(width: UIScreen.main.bounds.width - 100, height: 120)
+                    .background(.white)
+                    .cornerRadius(10)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.black.opacity(0.3).ignoresSafeArea())
+            }
             
-            Divider()
-            
-            Spacer()
         }
+        .onAppear(perform: {
+            // calling location delegate
+            
+            HomeModel.locationManager.delegate = HomeModel
+            
+            
+        })
         
         
     }
