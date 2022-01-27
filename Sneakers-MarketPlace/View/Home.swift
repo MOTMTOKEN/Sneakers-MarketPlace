@@ -20,7 +20,9 @@ struct Home: View {
                 HStack(spacing: 15) {
                     
                     Button(action: {
-                        
+                        withAnimation(.easeIn){
+                            HomeModel.showSideBar.toggle()
+                        }
                     }, label: {
                         Image(systemName: "line.horizontal.3")
                             .font(.title)
@@ -65,6 +67,23 @@ struct Home: View {
                 
                 Spacer()
             }
+            
+            // side bar
+            
+            HStack {
+                sideBar(homeData: HomeModel)
+                    .offset(x: HomeModel.showSideBar ? 0 : -UIScreen.main.bounds.width / 1.6)
+                
+                Spacer(minLength: 0)
+            }
+            .background(Color.black.opacity(HomeModel.showSideBar ? 0.3 : 0).ignoresSafeArea())
+            // closing when tap again
+            .onTapGesture {
+                withAnimation(.easeIn){
+                    HomeModel.showSideBar.toggle()
+                }
+            }
+            
             
             // non closable alert if permission denied
             

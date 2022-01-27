@@ -18,6 +18,9 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
     @Published var userAdress = ""
     @Published var noLocation = false
     
+    // side bar
+    @Published var showSideBar = false
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         //check location acess
         
