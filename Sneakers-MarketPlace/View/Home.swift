@@ -30,8 +30,20 @@ struct Home: View {
                     })
                     
                     
-                    Text(HomeModel.userLocation == nil ? "Locating..." : "Location is;")
-                        .foregroundColor(.black)
+                    
+                    if ((HomeModel.userLocation) != nil) {
+                        Text(Image(systemName: "location"))
+                            .foregroundColor(.black)
+                            
+                    } else {
+                        Text("Locating...")
+                            .foregroundColor(.black)
+                            
+                    }
+                    
+                    
+                    
+                    
                     
                     Text(HomeModel.userAdress)
                         .font(.caption)
@@ -39,6 +51,13 @@ struct Home: View {
                         .foregroundColor(.pink)
                     
                     Spacer(minLength: 0)
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "plus.circle")
+                            .foregroundColor(.pink)
+                    })
                     
                 }.padding([.horizontal, .top])
                 

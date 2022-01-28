@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C78E1CE27A3095D0007AFFF /* sideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C78E1CD27A3095C0007AFFF /* sideBar.swift */; };
+		5C78E1D027A322080007AFFF /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C78E1CF27A322080007AFFF /* loginPage.swift */; };
 		5CCE55BA27976BB900E03C5E /* Sneakers_MarketPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */; };
 		5CCE55BC27976BB900E03C5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55BB27976BB900E03C5E /* ContentView.swift */; };
 		5CCE55BE27976BC200E03C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE55BD27976BC200E03C5E /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		5C78E1CC27A04F5D0007AFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C78E1CD27A3095C0007AFFF /* sideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideBar.swift; sourceTree = "<group>"; };
+		5C78E1CF27A322080007AFFF /* loginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
 		5CCE55B627976BB900E03C5E /* Sneakers-MarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakers-MarketPlace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCE55B927976BB900E03C5E /* Sneakers_MarketPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakers_MarketPlaceApp.swift; sourceTree = "<group>"; };
 		5CCE55BB27976BB900E03C5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				5CCE55EF279DCCD900E03C5E /* Home.swift */,
 				5C78E1CD27A3095C0007AFFF /* sideBar.swift */,
+				5C78E1CF27A322080007AFFF /* loginPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				5CCE55BC27976BB900E03C5E /* ContentView.swift in Sources */,
 				5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */,
+				5C78E1D027A322080007AFFF /* loginPage.swift in Sources */,
 				5C78E1CE27A3095D0007AFFF /* sideBar.swift in Sources */,
 				5CCE55BA27976BB900E03C5E /* Sneakers_MarketPlaceApp.swift in Sources */,
 				5CCE55F2279DCD2200E03C5E /* HomeViewModel.swift in Sources */,
