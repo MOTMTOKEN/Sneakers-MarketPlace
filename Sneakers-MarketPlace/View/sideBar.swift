@@ -45,6 +45,24 @@ struct sideBar: View {
                 Spacer(minLength: 0)
             })
                 .padding()
+            
+            
+            
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.title)
+                    .foregroundColor(.pink)
+                
+                Text("Upload for sale")
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                
+                Spacer(minLength: 0)
+            })
+                .padding()
+            
                 
             
             Spacer()
@@ -57,6 +75,10 @@ struct sideBar: View {
                     .foregroundColor(.pink)
             }
             .padding(10)
+            
+            
+            
+            
         }
         .padding([.top, .trailing])
         .frame(width: UIScreen.main.bounds.width / 1.6)
