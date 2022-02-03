@@ -22,6 +22,7 @@
 		5CCE55EB279ACAD800E03C5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */; };
 		5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55EF279DCCD900E03C5E /* Home.swift */; };
 		5CCE55F2279DCD2200E03C5E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */; };
+		5CF2A37627AC587C00CA449E /* signInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2A37527AC587C00CA449E /* signInPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5CCE55EA279ACAD800E03C5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CCE55EF279DCCD900E03C5E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5CF2A37527AC587C00CA449E /* signInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				5CCE55EF279DCCD900E03C5E /* Home.swift */,
 				5C78E1CD27A3095C0007AFFF /* sideBar.swift */,
 				5C78E1CF27A322080007AFFF /* loginPage.swift */,
+				5CF2A37527AC587C00CA449E /* signInPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCE55BC27976BB900E03C5E /* ContentView.swift in Sources */,
+				5CF2A37627AC587C00CA449E /* signInPage.swift in Sources */,
 				5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */,
 				5C78E1D027A322080007AFFF /* loginPage.swift in Sources */,
 				5C78E1CE27A3095D0007AFFF /* sideBar.swift in Sources */,
