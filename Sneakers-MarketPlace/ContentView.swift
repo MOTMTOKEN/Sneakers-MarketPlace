@@ -12,16 +12,17 @@ struct ContentView: View {
     
     var db = Firestore.firestore()
 
+    @State var show = false
     
     var body: some View {
-        //loginPage()
-        Home()
+        
+        signInPage()
     }
     
     
-    
-    
 }
+
+
 
 struct ContentView_Previews:
     PreviewProvider {
@@ -29,6 +30,7 @@ struct ContentView_Previews:
         ContentView()
     }
 }
+
 
 
 

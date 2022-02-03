@@ -1,15 +1,14 @@
 //
-//  loginPage.swift
+//  signInPage.swift
 //  Sneakers-MarketPlace
 //
-//  Created by Amir Nilsson on 2022-01-27.
+//  Created by Amir Nilsson on 2022-02-03.
 //
 
 import SwiftUI
 import Firebase
 
-struct loginPage: View {
-    
+struct signInPage: View {
     
     @State var email = ""
     @State var pass = ""
@@ -22,7 +21,24 @@ struct loginPage: View {
         NavigationView {
             ScrollView {
         
-               
+                HStack(alignment: .top) {
+                    
+                    NavigationLink{
+                        loginPage()
+                    } label : {
+                        Spacer()
+                        Text("Login")
+                            .fontWeight(.bold)
+                            .foregroundColor(.pink)
+                            
+                    }
+                    .padding()
+                    
+                    
+                    
+                    
+                    
+                                    }
                         
                         VStack{
                             
@@ -30,7 +46,7 @@ struct loginPage: View {
                             
                             Image("logo")
                             
-                            Text("Log in to your account")
+                            Text("Register account")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
@@ -68,10 +84,12 @@ struct loginPage: View {
                             .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
                             .padding(.top, 25)
                             
+                            
+                            
                             Button(action: {
-                                loginUser()
+                                handleAction()
                             }, label: {
-                                Text("Login")
+                                Text("Register")
                                     .foregroundColor(.white)
                                     .padding(.vertical)
                                     .frame(width: UIScreen.main.bounds.width - 50)
@@ -84,32 +102,72 @@ struct loginPage: View {
                                                 showingAlert = false
                                             }
                                         }
+                                .alert("Account created please log in!", isPresented: $positive) {
+                                            Button("OK", role: .cancel) {
+                                                positive = false
+                                            }
+                                        }
+                            
+                            
+                        
                             
                         }
                         .padding(.horizontal, 25)
-                    
+                            
+                        }
+                        .padding(.horizontal, 25)
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(false)
+                        .fullScreenCover(isPresented: $isLoginMode, onDismiss: nil, content: {
+                            Home()
+                        })
             
                     
-                    
-                    
-                        
             
+                
+                    
+            
+                
+    
                     
                             
             }
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(false)
         }
-        .fullScreenCover(isPresented: $isLoginMode, onDismiss: nil, content: {
-            Home()
-        })
-        
-        
-                }
     
     @State var isLoginMode = false
+    
+    func handleAction(){
+        if isLoginMode {
+        //loginUser()
+        } else {
+            createNewAccount()
+            
+        }
+    }
+    
     @State var errorMessage = ""
     @State var showingAlert = false
+    @State var positive = false
+    
+    func createNewAccount() {
+        Auth.auth().createUser(withEmail: email, password: pass) {
+            result, err in
+            if let err = err {
+                print("ERROR FAILED TO CREATE USER", err)
+                errorMessage = "ERROR FAILED TO CREATE USER: \(err.localizedDescription)"
+                showingAlert = true
+                return
+            }
+            print("user created \(result?.user.uid ?? "")")
+            
+            errorMessage = "user created \(result?.user.uid ?? "")"
+        
+            positive = true
+            
+            
+        }
+        
+    }
     
     private func loginUser(){
         Auth.auth().signIn(withEmail: email, password: pass, completion: {
@@ -121,21 +179,18 @@ struct loginPage: View {
                 return
             }
             print("user logged in as \(result?.user.uid ?? "")")
-            isLoginMode = true
+            
             errorMessage = "user logged in as \(result?.user.uid ?? "")"
-
         })
     }
-                
-            }
+        
+        
+                }
 
 
-struct loginPage_Previews: PreviewProvider {
+
+struct signInPage_Previews: PreviewProvider {
     static var previews: some View {
-        loginPage()
+        signInPage()
     }
 }
-
-
-
-

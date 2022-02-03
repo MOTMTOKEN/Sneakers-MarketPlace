@@ -11,8 +11,11 @@ import Firebase
 @main
 struct Sneakers_MarketPlaceApp: App {
     
+   
+    
     init () {
         FirebaseApp.configure()
+        
     }
     
     var body: some Scene {
