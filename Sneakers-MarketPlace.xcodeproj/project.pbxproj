@@ -23,6 +23,9 @@
 		5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55EF279DCCD900E03C5E /* Home.swift */; };
 		5CCE55F2279DCD2200E03C5E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */; };
 		5CF2A37627AC587C00CA449E /* signInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2A37527AC587C00CA449E /* signInPage.swift */; };
+		5CF2A37827ACBF3C00CA449E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2A37727ACBF3C00CA449E /* Item.swift */; };
+		5CF2A37A27ACEA2800CA449E /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2A37927ACEA2700CA449E /* ItemView.swift */; };
+		5CF2A37D27ACEC2D00CA449E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5CF2A37C27ACEC2D00CA449E /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,8 @@
 		5CCE55EF279DCCD900E03C5E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5CCE55F1279DCD2200E03C5E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5CF2A37527AC587C00CA449E /* signInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInPage.swift; sourceTree = "<group>"; };
+		5CF2A37727ACBF3C00CA449E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5CF2A37927ACEA2700CA449E /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF2A37D27ACEC2D00CA449E /* SDWebImageSwiftUI in Frameworks */,
 				5CCE55E9279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				5CCE55E5279ACA7A00E03C5E /* FirebaseAuth in Frameworks */,
 				5CCE55E7279ACA7A00E03C5E /* FirebaseFirestore in Frameworks */,
@@ -158,6 +164,7 @@
 				5C78E1CD27A3095C0007AFFF /* sideBar.swift */,
 				5C78E1CF27A322080007AFFF /* loginPage.swift */,
 				5CF2A37527AC587C00CA449E /* signInPage.swift */,
+				5CF2A37927ACEA2700CA449E /* ItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 		5CCE55ED279DCC2E00E03C5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5CF2A37727ACBF3C00CA449E /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				5CCE55E4279ACA7A00E03C5E /* FirebaseAuth */,
 				5CCE55E6279ACA7A00E03C5E /* FirebaseFirestore */,
 				5CCE55E8279ACA7A00E03C5E /* FirebaseFirestoreSwift-Beta */,
+				5CF2A37C27ACEC2D00CA449E /* SDWebImageSwiftUI */,
 			);
 			productName = "Sneakers-MarketPlace";
 			productReference = 5CCE55B627976BB900E03C5E /* Sneakers-MarketPlace.app */;
@@ -272,6 +281,7 @@
 			mainGroup = 5CCE55AD27976BB900E03C5E;
 			packageReferences = (
 				5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5CF2A37B27ACEC2C00CA449E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 5CCE55B727976BB900E03C5E /* Products */;
 			projectDirPath = "";
@@ -320,6 +330,8 @@
 				5CF2A37627AC587C00CA449E /* signInPage.swift in Sources */,
 				5CCE55F0279DCCD900E03C5E /* Home.swift in Sources */,
 				5C78E1D027A322080007AFFF /* loginPage.swift in Sources */,
+				5CF2A37A27ACEA2800CA449E /* ItemView.swift in Sources */,
+				5CF2A37827ACBF3C00CA449E /* Item.swift in Sources */,
 				5C78E1CE27A3095D0007AFFF /* sideBar.swift in Sources */,
 				5CCE55BA27976BB900E03C5E /* Sneakers_MarketPlaceApp.swift in Sources */,
 				5CCE55F2279DCD2200E03C5E /* HomeViewModel.swift in Sources */,
@@ -683,6 +695,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		5CF2A37B27ACEC2C00CA449E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -700,6 +720,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5CCE55E3279ACA7A00E03C5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		5CF2A37C27ACEC2D00CA449E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CF2A37B27ACEC2C00CA449E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
