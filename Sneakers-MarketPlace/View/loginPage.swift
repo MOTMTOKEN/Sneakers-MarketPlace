@@ -10,6 +10,7 @@ import Firebase
 
 struct loginPage: View {
     
+    @StateObject var HomeModel = HomeViewModel()
     
     @State var email = ""
     @State var pass = ""
@@ -122,8 +123,10 @@ struct loginPage: View {
             }
             print("user logged in as \(result?.user.uid ?? "")")
             isLoginMode = true
+            HomeModel.checkLoginForData()
             errorMessage = "user logged in as \(result?.user.uid ?? "")"
-
+            
+            
         })
     }
                 

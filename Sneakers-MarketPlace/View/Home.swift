@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 struct Home: View {
     
@@ -14,6 +16,7 @@ struct Home: View {
     var body: some View {
         
         ZStack {
+            
             
             VStack(spacing: 10) {
                 
@@ -84,7 +87,32 @@ struct Home: View {
                 
                 Divider()
                 
-                Spacer()
+                
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    
+                    VStack(spacing: 25) {
+                    
+                        ForEach(HomeModel.items) { item in
+                            
+                            
+                            ItemView(item: item)
+                                .frame(width: UIScreen.main.bounds.width - 30)
+                            
+                            
+                            
+                            
+                        }
+                        
+                        
+                    }
+                    .padding(.top, 10)
+                    
+                    
+                })
+                    .onAppear(){
+                        self.HomeModel.fetchData2()
+                    }
+                
             }
             
             // side bar
