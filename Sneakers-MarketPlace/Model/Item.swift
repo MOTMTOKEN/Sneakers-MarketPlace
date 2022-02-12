@@ -16,4 +16,5 @@ struct Item: Identifiable {
     var item_details: String    
     var item_image: String
     var item_rating: String
+    var user_location: String
 }

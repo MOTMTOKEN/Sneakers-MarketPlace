@@ -27,6 +27,7 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
     
     // itemData
     @Published var items: [Item] = []
+    @Published var filtered: [Item] = []
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         //check location acess
@@ -83,7 +84,7 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
     }
     
     // fetching Data
-    
+    /*
     func fetchData() {
         
         let db = Firestore.firestore()
@@ -107,6 +108,7 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
             })
         }
     }
+     */
     
     func fetchData2() {
         
@@ -126,11 +128,13 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
                 let ratings = data["item_rating"] as! String
                 let image = data["item_image"] as! String
                 let details = data["item_details"] as! String
+                let location = self.userAdress
                 
                 print("right before returning item")
                 
-                return Item(id: id, item_name: name, item_cost: cost, item_details: details, item_image: image, item_rating: ratings)
+                return Item(id: id, item_name: name, item_cost: cost, item_details: details, item_image: image, item_rating: ratings, user_location: location)
             }
+            self.filtered = self.items
         }
     }
     
@@ -140,6 +144,16 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
             self.fetchData2()
             print("fetchData func ran")
         
+    }
+    
+    
+    func filterData() {
+        
+        withAnimation(.linear) {
+            self.filtered = self.items.filter {
+                return $0.item_name.lowercased().contains(self.search.lowercased())
+            }
+        }
     }
     
     
