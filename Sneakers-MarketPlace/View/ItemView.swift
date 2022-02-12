@@ -10,11 +10,39 @@ import SDWebImageSwiftUI
 
 struct ItemView: View {
     
+    @StateObject var HomeModel = HomeViewModel()
+    
     var item: Item
     
     var body: some View {
         
         VStack {
+            
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+                
+               
+                
+                HStack {
+                    if ((HomeModel.userLocation) != nil) {
+                        Text("\(item.user_location)")
+                            .foregroundColor(.white)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal)
+                            .background(.pink)
+                        Spacer(minLength: 0)
+                    } else {
+                        Text("location loading")
+                            .foregroundColor(.white)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal)
+                            .background(.pink)
+                        Spacer(minLength: 0)
+                    }
+                    
+                }
+                    
+            })
+                
             
             WebImage(url: URL(string: item.item_image))
                 .resizable()
@@ -50,6 +78,7 @@ struct ItemView: View {
                 
                 Spacer(minLength: 0)
             }
+            
         }
     }
 }
