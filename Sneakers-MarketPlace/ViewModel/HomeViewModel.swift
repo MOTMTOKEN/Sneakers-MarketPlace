@@ -124,7 +124,7 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
                 
                 let id = queryDocumentSnapshot.documentID
                 let name = data["item_name"] as! String
-                let cost = data["item_cost"] as! NSNumber
+                let cost = data["item_cost"] as! String
                 let ratings = data["item_rating"] as! String
                 let image = data["item_image"] as! String
                 let details = data["item_details"] as! String

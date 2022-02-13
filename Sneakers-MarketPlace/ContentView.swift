@@ -17,8 +17,8 @@ struct ContentView: View {
     var body: some View {
         
         //signInPage()
-       // Home()
-        UploadItem()
+       Home()
+     //  UploadItem()
     }
     
     
