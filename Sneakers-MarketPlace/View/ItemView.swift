@@ -14,6 +14,8 @@ struct ItemView: View {
     
     var item: Item
     
+    
+    
     var body: some View {
         
         VStack {
@@ -40,6 +42,8 @@ struct ItemView: View {
                     }
                     
                 }
+                .padding(.trailing, 10)
+                .padding(.top, 10)
                     
             })
                 
@@ -48,6 +52,7 @@ struct ItemView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 250)
+                
             
             HStack(spacing: 8) {
                 

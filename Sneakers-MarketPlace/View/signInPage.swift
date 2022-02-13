@@ -38,7 +38,7 @@ struct signInPage: View {
                     
                     
                     
-                                    }
+                }
                         
                         VStack{
                             

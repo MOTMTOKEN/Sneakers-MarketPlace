@@ -13,11 +13,15 @@ struct Home: View {
     
     @StateObject var HomeModel = HomeViewModel()
     
+    
+
     var body: some View {
+        
+        
         
         ZStack {
             
-            
+            NavigationView {
             VStack(spacing: 10) {
                 
                 HStack(spacing: 15) {
@@ -87,12 +91,20 @@ struct Home: View {
                     
                     VStack(spacing: 25) {
                     
-                        ForEach(HomeModel.filtered) { item in
+                        ForEach(HomeModel.filtered, id: \.id) { item in
                             
-                            
-                            ItemView(item: item)
-                                .frame(width: UIScreen.main.bounds.width - 30)
-                            
+                            NavigationLink(destination: {
+                                
+                                    DetailView(item: item)
+                                
+                                
+                            }, label: {
+                                ItemView(item: item)
+                                    .frame(width: UIScreen.main.bounds.width - 30)
+                            })
+                                .navigationBarHidden(true)
+                                                            
+                      
                         }
                         
                         
@@ -105,7 +117,12 @@ struct Home: View {
                         self.HomeModel.fetchData2()
                     }
                 
+                }
+                
+                
             }
+            .accentColor(.pink)
+
             
             // side bar
             
