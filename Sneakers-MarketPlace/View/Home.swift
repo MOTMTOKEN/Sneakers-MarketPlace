@@ -59,12 +59,12 @@ struct Home: View {
                     
                     Spacer(minLength: 0)
                     
-                    Button(action: {
-                        
-                    }, label: {
+                    NavigationLink {
+                        UploadItem()
+                    } label: {
                         Image(systemName: "plus.circle")
                             .foregroundColor(.pink)
-                    })
+                    }
                     
                 }.padding([.horizontal, .top])
                 

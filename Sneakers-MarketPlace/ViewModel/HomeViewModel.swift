@@ -114,7 +114,7 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
         
         let db = Firestore.firestore()
         
-        db.collection("Items").addSnapshotListener{ (querySnapshot, error ) in
+        db.collection("Items1").addSnapshotListener{ (querySnapshot, error ) in
             guard let documents = querySnapshot?.documents else {
                 print("no documents")
                 return
@@ -124,11 +124,12 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
                 
                 let id = queryDocumentSnapshot.documentID
                 let name = data["item_name"] as! String
-                let cost = data["item_cost"] as! String
+                print("this is line 127 \(name)")
+                let cost = data["item_cost"] as! Double
                 let ratings = data["item_rating"] as! String
                 let image = data["item_image"] as! String
                 let details = data["item_details"] as! String
-                let location = self.userAdress
+                let location = data["user_location"] as! String
                 
                 print("right before returning item")
                 
