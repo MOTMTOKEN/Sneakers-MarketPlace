@@ -7,12 +7,13 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestoreSwift
 
-struct Item: Identifiable {
+struct Item: Identifiable, Codable {
     
-    var id: String
+    @DocumentID var id: String?
     var item_name: String
-    var item_cost: NSNumber
+    var item_cost: Double
     var item_details: String    
     var item_image: String
     var item_rating: String

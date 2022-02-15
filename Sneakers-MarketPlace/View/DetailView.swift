@@ -12,6 +12,7 @@ struct DetailView: View {
     
     var item: Item!
     
+    @StateObject var HomeModel = HomeViewModel()
     
     
     var body: some View {
@@ -22,6 +23,11 @@ struct DetailView: View {
                 
                 
                 Text(item.item_name)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.pink)
+                    .font(.largeTitle)
+                
+                Text(item.user_location)
                     .fontWeight(.heavy)
                     .foregroundColor(.pink)
                     .font(.largeTitle)

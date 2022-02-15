@@ -48,9 +48,9 @@ struct sideBar: View {
             
             
             
-            Button(action: {
-                
-            }, label: {
+            NavigationLink {
+                UploadItem()
+            } label: {
                 Image(systemName: "square.and.arrow.up")
                     .font(.title)
                     .foregroundColor(.pink)
@@ -60,7 +60,7 @@ struct sideBar: View {
                     .foregroundColor(.black)
                 
                 Spacer(minLength: 0)
-            })
+            }
                 .padding()
             
                 
