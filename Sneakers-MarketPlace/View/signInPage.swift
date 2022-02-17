@@ -132,6 +132,7 @@ struct signInPage: View {
                     
                             
             }
+        .accentColor(.pink)
         }
     
     @State var isLoginMode = false
