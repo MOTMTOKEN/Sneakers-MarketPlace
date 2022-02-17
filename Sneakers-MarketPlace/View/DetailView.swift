@@ -18,13 +18,15 @@ struct DetailView: View {
     
     var item: Item!
     
+   // @ObservedObject var HomeModel : HomeViewModel
+    
     @StateObject var HomeModel = HomeViewModel()
     
     @State var more = false
     
     var edges = UIApplication.shared.windows.first?.safeAreaInsets
     
-    
+    // @State var adress : String
     
     var body: some View {
         
@@ -140,15 +142,16 @@ struct DetailView: View {
                     }
                     .padding([.vertical, .trailing])
                     
+                    
                     HStack(spacing: 15){
                         
-                        Text("Adress: ")
+                        Text("Phone: ")
                             .fontWeight(.heavy)
                             .foregroundColor(.black)
                             .frame(width: 75, alignment: .leading)
                             
                         
-                        Text("Apple HQ") // item.user_location
+                        Text(item.user_phone) // item.user_location
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                         
@@ -158,15 +161,16 @@ struct DetailView: View {
                     .padding(.trailing)
                     .padding(.top, 10)
                     
+                    
                     HStack(spacing: 15){
                         
                         Text("Contact:")
                             .fontWeight(.heavy)
                             .foregroundColor(.black)
                             .frame(width: 75, alignment: .leading)
-                            
                         
-                        Text("amir123@gmail.com")
+                                                
+                        Text(item.user_email)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                         
@@ -181,12 +185,12 @@ struct DetailView: View {
                     Spacer(minLength: 0)
                     
                     Button(action: {
-                        /*
+                        
                         let phone = "tel://"
-                        let phoneNumberformatted = phone + item.item_number
+                        let phoneNumberformatted = phone + item.user_phone
                         guard let url = URL(string: phoneNumberformatted) else { return }
                         UIApplication.shared.open(url)
-                         */
+                         
                     }) {
                         
                         Label(title: {

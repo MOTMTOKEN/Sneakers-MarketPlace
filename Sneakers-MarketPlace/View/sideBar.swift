@@ -49,7 +49,7 @@ struct sideBar: View {
             
             
             NavigationLink {
-                UploadItem()
+                UploadItem(adress: "")
             } label: {
                 Image(systemName: "square.and.arrow.up")
                     .font(.title)

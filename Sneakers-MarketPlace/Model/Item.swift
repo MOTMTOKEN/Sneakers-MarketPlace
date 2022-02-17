@@ -18,4 +18,7 @@ struct Item: Identifiable, Codable {
     var item_image: String
     var item_rating: String
     var user_location: String
+    var user_email: String
+    var user_phone: String
+    
 }

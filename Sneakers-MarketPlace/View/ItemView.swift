@@ -10,7 +10,11 @@ import SDWebImageSwiftUI
 
 struct ItemView: View {
     
+   // @ObservedObject var HomeModel : HomeViewModel
+    
     @StateObject var HomeModel = HomeViewModel()
+    
+    @State var adress = ""
     
     var item: Item
     
@@ -25,21 +29,13 @@ struct ItemView: View {
                
                 
                 HStack {
-                    if ((HomeModel.userLocation) != nil) {
+                    
                         Text("\(item.user_location)")
                             .foregroundColor(.white)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
                             .background(.pink)
                         Spacer(minLength: 0)
-                    } else {
-                        Text("location loading")
-                            .foregroundColor(.white)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal)
-                            .background(.pink)
-                        Spacer(minLength: 0)
-                    }
                     
                 }
                 .padding(.trailing, 10)
