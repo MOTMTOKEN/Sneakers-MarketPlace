@@ -60,7 +60,7 @@ struct Home: View {
                     Spacer(minLength: 0)
                     
                     NavigationLink {
-                        UploadItem()
+                        UploadItem(adress: HomeModel.userAdress)
                     } label: {
                         Image(systemName: "plus.circle")
                             .foregroundColor(.pink)
@@ -95,7 +95,7 @@ struct Home: View {
                             
                             NavigationLink(destination: {
                                 
-                                    DetailView(item: item)
+                                DetailView(item: item)
                                 
                                 
                             }, label: {

@@ -103,6 +103,7 @@ struct loginPage: View {
         }
         .fullScreenCover(isPresented: $isLoginMode, onDismiss: nil, content: {
             Home()
+            
         })
         
         

@@ -129,11 +129,14 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
                 let ratings = data["item_rating"] as! String
                 let image = data["item_image"] as! String
                 let details = data["item_details"] as! String
-                let location = data["user_location"] as! String
+                let location = data["user_location"] as? String
+                let email = data["user_email"] as? String
+                let phone = data["user_phone"] as? String
+                
                 
                 print("right before returning item")
                 
-                return Item(id: id, item_name: name, item_cost: cost, item_details: details, item_image: image, item_rating: ratings, user_location: location)
+                return Item(id: id, item_name: name, item_cost: cost, item_details: details, item_image: image, item_rating: ratings, user_location: location ?? "", user_email: email ?? "", user_phone: phone ?? "")
             }
             self.filtered = self.items
         }

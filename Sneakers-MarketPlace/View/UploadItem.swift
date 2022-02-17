@@ -22,7 +22,11 @@ struct UploadItem: View {
     @State var itemImage = ""
     @State var itemDetails = ""
     @State var itemRating = ""
+    @State var userPhone = ""
     @State var uploaded = false
+    
+    @State var email = ""
+    @State var adress : String
     
     @State var changeProfileImage = false
     @State var openCameraRoll = false
@@ -53,10 +57,9 @@ struct UploadItem: View {
                                 .frame(width: 120, height: 120)
                                 .clipShape(Circle())
                         } else {
-                            Image("add-profile-image")
+                            Image(systemName: "photo.fill")
                                 .resizable()
                                 .frame(width: 120, height: 120)
-                                .clipShape(Circle())
                                 
                         }
                 }).sheet(isPresented: $openCameraRoll) {
@@ -93,6 +96,11 @@ struct UploadItem: View {
                 }
                 .pickerStyle(.wheel)
                 */
+                
+                TextField("Enter phone number", text: self.$userPhone)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                .padding(.top, 25)
                 
                 TextField("Rating 1-5", text: self.$itemRating)
                 .padding()
@@ -142,17 +150,38 @@ struct UploadItem: View {
                 print("\(err)")
                 return
             }
+            
+            
+            
             ref.downloadURL { url, err in
                 if let err = err {
                     print("\(err)")
                     return
                 }
+                
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    email = user.email ?? ""
+                } else {
+                    
+                }
+                
+                /*
+                if ((HomeModel.userLocation) != nil) {
+                    adress = HomeModel.userAdress
+                } else {
+                    adress = "adress not found"
+                }
+                */
+                 
+                
                 let cost = Double(itemCost) ?? 0.0
                 
-                let item = Item(item_name: itemName, item_cost: cost, item_details: itemDetails, item_image: url?.absoluteString ?? "", item_rating: itemRating, user_location: HomeModel.userAdress)
+                let item = Item(item_name: itemName, item_cost: cost, item_details: itemDetails, item_image: url?.absoluteString ?? "", item_rating: itemRating, user_location: adress, user_email: email, user_phone: userPhone)
+
+    
                 
             
-                
                 let db = Firestore.firestore()
                 
                 do {
