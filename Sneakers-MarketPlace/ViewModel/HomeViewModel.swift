@@ -85,29 +85,29 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
     
     // fetching Data
     /*
-    func fetchData() {
-        
-        let db = Firestore.firestore()
-        
-        db.collection("Items").getDocuments { (snap, err) in
-            guard let itemData = snap else {return}
-            
-            print("before line 93")
-            self.items = itemData.documents.compactMap({  (doc) -> Item? in
-                print("after line 93")
-                
-                let id = doc.documentID
-                let name = doc.get("item_name") as! String
-                let cost = doc.get("item_cost") as! NSNumber
-                let ratings = doc.get("item_rating") as! String
-                let image = doc.get("item_image") as! String
-                let details = doc.get("item_details") as! String
-                
-                print("just before line 103")
-                return Item(id: id, item_name: name, item_cost: cost, item_details: details, item_image: image, item_rating: ratings)
-            })
-        }
-    }
+     func fetchData() {
+     
+     let db = Firestore.firestore()
+     
+     db.collection("Items").getDocuments { (snap, err) in
+     guard let itemData = snap else {return}
+     
+     print("before line 93")
+     self.items = itemData.documents.compactMap({  (doc) -> Item? in
+     print("after line 93")
+     
+     let id = doc.documentID
+     let name = doc.get("item_name") as! String
+     let cost = doc.get("item_cost") as! NSNumber
+     let ratings = doc.get("item_rating") as! String
+     let image = doc.get("item_image") as! String
+     let details = doc.get("item_details") as! String
+     
+     print("just before line 103")
+     return Item(id: id, item_name: name, item_cost: cost, item_details: details, item_image: image, item_rating: ratings)
+     })
+     }
+     }
      */
     
     func fetchData2() {
@@ -143,10 +143,10 @@ class HomeViewModel : NSObject ,ObservableObject, CLLocationManagerDelegate {
     }
     
     
-     func checkLoginForData() {
+    func checkLoginForData() {
         
-            self.fetchData2()
-            print("fetchData func ran")
+        self.fetchData2()
+        print("fetchData func ran")
         
     }
     

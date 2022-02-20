@@ -22,81 +22,81 @@ struct loginPage: View {
         
         NavigationView {
             ScrollView {
-        
-               
+                
+                
+                
+                VStack{
+                    
+                    
+                    
+                    Image("logo")
+                    
+                    Text("Log in to your account")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .padding(.top, 35)
+                    
+                    TextField("Email", text: self.$email)
+                        .keyboardType(.emailAddress)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                        .padding(.top, 25)
+                    
+                    HStack (spacing: 15) {
                         
-                        VStack{
-                            
-                            
-                            
-                            Image("logo")
-                            
-                            Text("Log in to your account")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                                .padding(.top, 35)
-                            
-                            TextField("Email", text: self.$email)
-                                .keyboardType(.emailAddress)
-                            .padding()
-                            .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                            .padding(.top, 25)
                         
-                            HStack (spacing: 15) {
+                        VStack {
+                            
+                            if self.visable {
                                 
-                                
-                                VStack {
-                                    
-                                    if self.visable {
-                                        
-                                        TextField("Password", text: self.$pass)
-                                    } else {
-                                        SecureField("Password", text: self.$pass)
-                                    }
-                                    
-                                }
-                                
-                                Button(action: {
-                                    self.visable.toggle()
-                                }, label: {
-                                    Image(systemName: self.visable ?  "eye.slash.fill" : "eye.fill")
-                                        .foregroundColor(.pink)
-                                })
-                                
+                                TextField("Password", text: self.$pass)
+                            } else {
+                                SecureField("Password", text: self.$pass)
                             }
-                            .padding()
-                            .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                            .padding(.top, 25)
-                            
-                            Button(action: {
-                                loginUser()
-                            }, label: {
-                                Text("Login")
-                                    .foregroundColor(.white)
-                                    .padding(.vertical)
-                                    .frame(width: UIScreen.main.bounds.width - 50)
-                            })
-                                .background(.pink)
-                                .cornerRadius(10)
-                                .padding(.top, 25)
-                                .alert("\(errorMessage)", isPresented: $showingAlert) {
-                                            Button("OK", role: .cancel) {
-                                                showingAlert = false
-                                            }
-                                        }
                             
                         }
-                        .padding(.horizontal, 25)
-                    
-            
-                    
-                    
-                    
                         
-            
+                        Button(action: {
+                            self.visable.toggle()
+                        }, label: {
+                            Image(systemName: self.visable ?  "eye.slash.fill" : "eye.fill")
+                                .foregroundColor(.pink)
+                        })
+                        
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
                     
-                            
+                    Button(action: {
+                        loginUser()
+                    }, label: {
+                        Text("Login")
+                            .foregroundColor(.white)
+                            .padding(.vertical)
+                            .frame(width: UIScreen.main.bounds.width - 50)
+                    })
+                        .background(.pink)
+                        .cornerRadius(10)
+                        .padding(.top, 25)
+                        .alert("\(errorMessage)", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) {
+                                showingAlert = false
+                            }
+                        }
+                    
+                }
+                .padding(.horizontal, 25)
+                
+                
+                
+                
+                
+                
+                
+                
+                
             }
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(false)
@@ -107,7 +107,7 @@ struct loginPage: View {
         })
         
         
-                }
+    }
     
     @State var isLoginMode = false
     @State var errorMessage = ""
@@ -130,8 +130,8 @@ struct loginPage: View {
             
         })
     }
-                
-            }
+    
+}
 
 
 struct loginPage_Previews: PreviewProvider {

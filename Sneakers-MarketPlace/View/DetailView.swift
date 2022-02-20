@@ -18,7 +18,7 @@ struct DetailView: View {
     
     var item: Item!
     
-   // @ObservedObject var HomeModel : HomeViewModel
+    // @ObservedObject var HomeModel : HomeViewModel
     
     @StateObject var HomeModel = HomeViewModel()
     
@@ -32,32 +32,32 @@ struct DetailView: View {
         
         
         /*
-        VStack {
-            
-            VStack() {
-                
-                
-                Text(item.item_name)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.pink)
-                    .font(.largeTitle)
-                
-                Text(item.user_location)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.pink)
-                    .font(.largeTitle)
-            }
-        
-        
-        
-        WebImage(url: URL(string: item.item_image))
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(height: 250)
-            
-        
-     }
-        */
+         VStack {
+         
+         VStack() {
+         
+         
+         Text(item.item_name)
+         .fontWeight(.heavy)
+         .foregroundColor(.pink)
+         .font(.largeTitle)
+         
+         Text(item.user_location)
+         .fontWeight(.heavy)
+         .foregroundColor(.pink)
+         .font(.largeTitle)
+         }
+         
+         
+         
+         WebImage(url: URL(string: item.item_image))
+         .resizable()
+         .aspectRatio(contentMode: .fill)
+         .frame(height: 250)
+         
+         
+         }
+         */
         
         VStack {
             
@@ -80,7 +80,7 @@ struct DetailView: View {
                             .background(.white)
                             .cornerRadius(10)
                             .shadow(color: .black.opacity(0.2), radius: 5, x: 5, y: 5)
-                            
+                        
                     })
                     
                 }
@@ -149,7 +149,7 @@ struct DetailView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(.black)
                             .frame(width: 75, alignment: .leading)
-                            
+                        
                         
                         Text(item.user_phone) // item.user_location
                             .fontWeight(.bold)
@@ -169,7 +169,7 @@ struct DetailView: View {
                             .foregroundColor(.black)
                             .frame(width: 75, alignment: .leading)
                         
-                                                
+                        
                         Text(item.user_email)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
@@ -190,7 +190,7 @@ struct DetailView: View {
                         let phoneNumberformatted = phone + item.user_phone
                         guard let url = URL(string: phoneNumberformatted) else { return }
                         UIApplication.shared.open(url)
-                         
+                        
                     }) {
                         
                         Label(title: {

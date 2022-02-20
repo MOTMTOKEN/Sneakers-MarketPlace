@@ -14,7 +14,7 @@ struct Home: View {
     @StateObject var HomeModel = HomeViewModel()
     
     
-
+    
     var body: some View {
         
         
@@ -22,107 +22,107 @@ struct Home: View {
         ZStack {
             
             NavigationView {
-            VStack(spacing: 10) {
-                
-                HStack(spacing: 15) {
+                VStack(spacing: 10) {
                     
-                    Button(action: {
-                        withAnimation(.easeIn){
-                            HomeModel.showSideBar.toggle()
+                    HStack(spacing: 15) {
+                        
+                        Button(action: {
+                            withAnimation(.easeIn){
+                                HomeModel.showSideBar.toggle()
+                            }
+                        }, label: {
+                            Image(systemName: "line.horizontal.3")
+                                .font(.title)
+                                .foregroundColor(.pink)
+                        })
+                        
+                        
+                        
+                        if ((HomeModel.userLocation) != nil) {
+                            Text(Image(systemName: "location"))
+                                .foregroundColor(.black)
+                            
+                        } else {
+                            Text("Locating...")
+                                .foregroundColor(.black)
+                            
                         }
-                    }, label: {
-                        Image(systemName: "line.horizontal.3")
-                            .font(.title)
+                        
+                        
+                        
+                        
+                        
+                        Text(HomeModel.userAdress)
+                            .font(.caption)
+                            .fontWeight(.heavy)
                             .foregroundColor(.pink)
+                        
+                        Spacer(minLength: 0)
+                        
+                        NavigationLink {
+                            UploadItem(adress: HomeModel.userAdress)
+                        } label: {
+                            Image(systemName: "plus.circle")
+                                .foregroundColor(.pink)
+                        }
+                        
+                    }.padding([.horizontal, .top])
+                    
+                    Divider()
+                    
+                    HStack(spacing: 15){
+                        
+                        Image(systemName: "magnifyingglass")
+                            .font(.title2)
+                            .foregroundColor(.red)
+                        
+                        
+                        TextField("Search for Sneakers", text: $HomeModel.search)
+                        
+                        
+                        
+                    }.padding(.horizontal)
+                        .padding(.top, 10)
+                    
+                    Divider()
+                    
+                    
+                    ScrollView(.vertical, showsIndicators: false, content: {
+                        
+                        VStack(spacing: 25) {
+                            
+                            ForEach(HomeModel.filtered, id: \.id) { item in
+                                
+                                NavigationLink(destination: {
+                                    
+                                    DetailView(item: item)
+                                    
+                                    
+                                }, label: {
+                                    ItemView(item: item)
+                                        .frame(width: UIScreen.main.bounds.width - 30)
+                                })
+                                    .navigationBarHidden(true)
+                                
+                                
+                            }
+                            
+                            
+                        }
+                        .padding(.top, 10)
+                        
+                        
                     })
-                    
-                    
-                    
-                    if ((HomeModel.userLocation) != nil) {
-                        Text(Image(systemName: "location"))
-                            .foregroundColor(.black)
-                            
-                    } else {
-                        Text("Locating...")
-                            .foregroundColor(.black)
-                            
-                    }
-                    
-                    
-                    
-                    
-                    
-                    Text(HomeModel.userAdress)
-                        .font(.caption)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.pink)
-                    
-                    Spacer(minLength: 0)
-                    
-                    NavigationLink {
-                        UploadItem(adress: HomeModel.userAdress)
-                    } label: {
-                        Image(systemName: "plus.circle")
-                            .foregroundColor(.pink)
-                    }
-                    
-                }.padding([.horizontal, .top])
-                
-                Divider()
-                
-                HStack(spacing: 15){
-                    
-                    Image(systemName: "magnifyingglass")
-                        .font(.title2)
-                        .foregroundColor(.red)
-
-                    
-                    TextField("Search for Sneakers", text: $HomeModel.search)
-                    
-                    
-                    
-                }.padding(.horizontal)
-                    .padding(.top, 10)
-                
-                Divider()
-                
-                
-                ScrollView(.vertical, showsIndicators: false, content: {
-                    
-                    VStack(spacing: 25) {
-                    
-                        ForEach(HomeModel.filtered, id: \.id) { item in
-                            
-                            NavigationLink(destination: {
-                                
-                                DetailView(item: item)
-                                
-                                
-                            }, label: {
-                                ItemView(item: item)
-                                    .frame(width: UIScreen.main.bounds.width - 30)
-                            })
-                                .navigationBarHidden(true)
-                                                            
-                      
+                        .onAppear(){
+                            self.HomeModel.fetchData2()
                         }
-                        
-                        
-                    }
-                    .padding(.top, 10)
                     
-                    
-                })
-                    .onAppear(){
-                        self.HomeModel.fetchData2()
-                    }
-                
                 }
                 
                 
             }
             .accentColor(.pink)
-
+            
             
             // side bar
             
