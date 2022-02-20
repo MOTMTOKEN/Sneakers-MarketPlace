@@ -20,7 +20,7 @@ struct signInPage: View {
         
         NavigationView {
             ScrollView {
-        
+                
                 HStack(alignment: .top) {
                     
                     NavigationLink{
@@ -30,7 +30,7 @@ struct signInPage: View {
                         Text("Login")
                             .fontWeight(.bold)
                             .foregroundColor(.pink)
-                            
+                        
                     }
                     .padding()
                     
@@ -39,107 +39,107 @@ struct signInPage: View {
                     
                     
                 }
+                
+                VStack{
+                    
+                    
+                    
+                    Image("logo")
+                    
+                    Text("Register account")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .padding(.top, 35)
+                    
+                    TextField("Email", text: self.$email)
+                        .keyboardType(.emailAddress)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                        .padding(.top, 25)
+                    
+                    HStack (spacing: 15) {
                         
-                        VStack{
-                            
-                            
-                            
-                            Image("logo")
-                            
-                            Text("Register account")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                                .padding(.top, 35)
-                            
-                            TextField("Email", text: self.$email)
-                                .keyboardType(.emailAddress)
-                            .padding()
-                            .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                            .padding(.top, 25)
                         
-                            HStack (spacing: 15) {
+                        VStack {
+                            
+                            if self.visable {
                                 
-                                
-                                VStack {
-                                    
-                                    if self.visable {
-                                        
-                                        TextField("Password", text: self.$pass)
-                                    } else {
-                                        SecureField("Password", text: self.$pass)
-                                    }
-                                    
-                                }
-                                
-                                Button(action: {
-                                    self.visable.toggle()
-                                }, label: {
-                                    Image(systemName: self.visable ?  "eye.slash.fill" : "eye.fill")
-                                        .foregroundColor(.pink)
-                                })
-                                
+                                TextField("Password", text: self.$pass)
+                            } else {
+                                SecureField("Password", text: self.$pass)
                             }
-                            .padding()
-                            .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                            .padding(.top, 25)
                             
-                            
-                            
-                            Button(action: {
-                                handleAction()
-                            }, label: {
-                                Text("Register")
-                                    .foregroundColor(.white)
-                                    .padding(.vertical)
-                                    .frame(width: UIScreen.main.bounds.width - 50)
-                            })
-                                .background(.pink)
-                                .cornerRadius(10)
-                                .padding(.top, 25)
-                                .alert("\(errorMessage)", isPresented: $showingAlert) {
-                                            Button("OK", role: .cancel) {
-                                                showingAlert = false
-                                            }
-                                        }
-                                .alert("Account created please log in!", isPresented: $positive) {
-                                            Button("OK", role: .cancel) {
-                                                positive = false
-                                            }
-                                        }
-                            
-                            
+                        }
                         
-                            
-                        }
-                        .padding(.horizontal, 25)
-                            
-                        }
-                        .padding(.horizontal, 25)
-                        .navigationBarHidden(true)
-                        .navigationBarBackButtonHidden(false)
-                        .fullScreenCover(isPresented: $isLoginMode, onDismiss: nil, content: {
-                            Home()
+                        Button(action: {
+                            self.visable.toggle()
+                        }, label: {
+                            Image(systemName: self.visable ?  "eye.slash.fill" : "eye.fill")
+                                .foregroundColor(.pink)
                         })
-            
+                        
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
                     
-            
+                    
+                    
+                    Button(action: {
+                        handleAction()
+                    }, label: {
+                        Text("Register")
+                            .foregroundColor(.white)
+                            .padding(.vertical)
+                            .frame(width: UIScreen.main.bounds.width - 50)
+                    })
+                        .background(.pink)
+                        .cornerRadius(10)
+                        .padding(.top, 25)
+                        .alert("\(errorMessage)", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) {
+                                showingAlert = false
+                            }
+                        }
+                        .alert("Account created please log in!", isPresented: $positive) {
+                            Button("OK", role: .cancel) {
+                                positive = false
+                            }
+                        }
+                    
+                    
+                    
+                    
+                }
+                .padding(.horizontal, 25)
                 
-                    
-            
-                
-    
-                    
-                            
             }
-        .accentColor(.pink)
+            .padding(.horizontal, 25)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(false)
+            .fullScreenCover(isPresented: $isLoginMode, onDismiss: nil, content: {
+                Home()
+            })
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        .accentColor(.pink)
+    }
     
     @State var isLoginMode = false
     
     func handleAction(){
         if isLoginMode {
-        //loginUser()
+            //loginUser()
         } else {
             createNewAccount()
             
@@ -162,7 +162,7 @@ struct signInPage: View {
             print("user created \(result?.user.uid ?? "")")
             
             errorMessage = "user created \(result?.user.uid ?? "")"
-        
+            
             positive = true
             
             
@@ -184,9 +184,9 @@ struct signInPage: View {
             errorMessage = "user logged in as \(result?.user.uid ?? "")"
         })
     }
-        
-        
-                }
+    
+    
+}
 
 
 

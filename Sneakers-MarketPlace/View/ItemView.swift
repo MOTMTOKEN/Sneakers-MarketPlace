@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct ItemView: View {
     
-   // @ObservedObject var HomeModel : HomeViewModel
+    // @ObservedObject var HomeModel : HomeViewModel
     
     @StateObject var HomeModel = HomeViewModel()
     
@@ -26,29 +26,29 @@ struct ItemView: View {
             
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
                 
-               
+                
                 
                 HStack {
                     
-                        Text("\(item.user_location)")
-                            .foregroundColor(.white)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal)
-                            .background(.pink)
-                        Spacer(minLength: 0)
+                    Text("\(item.user_location)")
+                        .foregroundColor(.white)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .background(.pink)
+                    Spacer(minLength: 0)
                     
                 }
                 .padding(.trailing, 10)
                 .padding(.top, 10)
-                    
-            })
                 
+            })
+            
             
             WebImage(url: URL(string: item.item_image))
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 250)
-                
+            
             
             HStack(spacing: 8) {
                 

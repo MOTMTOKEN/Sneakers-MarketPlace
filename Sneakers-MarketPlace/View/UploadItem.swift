@@ -34,7 +34,7 @@ struct UploadItem: View {
     
     
     var body: some View {
-       
+        
         
         ScrollView{
             VStack {
@@ -46,66 +46,66 @@ struct UploadItem: View {
                     .padding(.top, 35)
                 
                 
-                    Button(action: {
-                        changeProfileImage = true
-                        openCameraRoll = true
+                Button(action: {
+                    changeProfileImage = true
+                    openCameraRoll = true
+                    
+                }, label: {
+                    if changeProfileImage {
+                        Image(uiImage: imageSelected)
+                            .resizable()
+                            .frame(width: 120, height: 120)
+                            .clipShape(Circle())
+                    } else {
+                        Image(systemName: "photo.fill")
+                            .resizable()
+                            .frame(width: 120, height: 120)
                         
-                    }, label: {
-                        if changeProfileImage {
-                            Image(uiImage: imageSelected)
-                                .resizable()
-                                .frame(width: 120, height: 120)
-                                .clipShape(Circle())
-                        } else {
-                            Image(systemName: "photo.fill")
-                                .resizable()
-                                .frame(width: 120, height: 120)
-                                
-                        }
+                    }
                 }).sheet(isPresented: $openCameraRoll) {
                     ImagePicker(selectedImage: $imageSelected, sourceType: .photoLibrary)
                 }
-                    
-                    
+                
+                
                 
                 TextField("Sneaker Name", text: self.$itemName)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                .padding(.top, 25)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
                 
                 
-                   
+                
                 
                 TextField("Sneaker Cost", text: self.$itemCost)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                .padding(.top, 25)
-                .keyboardType(.numberPad)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
+                    .keyboardType(.numberPad)
                 
                 
                 TextField("Sneaker Details", text: self.$itemDetails)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                .padding(.top, 25)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
                 
                 /*
-                Picker("Rating", selection: self.$itemRating) {
-                    ForEach(0..<6){
-                        Text(String($0))
-                    }
-                }
-                .pickerStyle(.wheel)
-                */
+                 Picker("Rating", selection: self.$itemRating) {
+                 ForEach(0..<6){
+                 Text(String($0))
+                 }
+                 }
+                 .pickerStyle(.wheel)
+                 */
                 
                 TextField("Enter phone number", text: self.$userPhone)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                .padding(.top, 25)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
                 
                 TextField("Rating 1-5", text: self.$itemRating)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
-                .padding(.top, 25)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.pink,lineWidth: 2))
+                    .padding(.top, 25)
                 
                 
                 
@@ -137,11 +137,11 @@ struct UploadItem: View {
         
         
     }
-        
+    
     
     func persistImageToStorage () {
         print("upload to firestore")
-      //  let fileName = UUID().uuidString
+        //  let fileName = UUID().uuidString
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let ref = Storage.storage().reference(withPath: uid)
         guard let imageData = self.imageSelected.jpegData(compressionQuality: 0.5) else {return}
@@ -167,25 +167,25 @@ struct UploadItem: View {
                 }
                 
                 /*
-                if ((HomeModel.userLocation) != nil) {
-                    adress = HomeModel.userAdress
-                } else {
-                    adress = "adress not found"
-                }
-                */
-                 
+                 if ((HomeModel.userLocation) != nil) {
+                 adress = HomeModel.userAdress
+                 } else {
+                 adress = "adress not found"
+                 }
+                 */
+                
                 
                 let cost = Double(itemCost) ?? 0.0
                 
                 let item = Item(item_name: itemName, item_cost: cost, item_details: itemDetails, item_image: url?.absoluteString ?? "", item_rating: itemRating, user_location: adress, user_email: email, user_phone: userPhone)
-
-    
                 
-            
+                
+                
+                
                 let db = Firestore.firestore()
                 
                 do {
-                   try db.collection("Items1").addDocument(from: item)
+                    try db.collection("Items1").addDocument(from: item)
                     
                 } catch {
                     print("error catch")

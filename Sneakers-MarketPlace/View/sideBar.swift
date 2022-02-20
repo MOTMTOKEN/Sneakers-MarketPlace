@@ -16,20 +16,20 @@ struct sideBar: View {
         VStack {
             
             Button(action: {}, label: {
-            HStack(spacing : 15){
-                Image(systemName: "person.crop.circle.fill")
-                    .font(.title)
-                    .foregroundColor(.pink)
-                
-                Text("Profile")
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                
-                Spacer(minLength: 0)
-                
-            }
-            .padding()
-        })
+                HStack(spacing : 15){
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.title)
+                        .foregroundColor(.pink)
+                    
+                    Text("Profile")
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                    
+                    Spacer(minLength: 0)
+                    
+                }
+                .padding()
+            })
             
             Button(action: {
                 
@@ -61,9 +61,9 @@ struct sideBar: View {
                 
                 Spacer(minLength: 0)
             }
-                .padding()
+            .padding()
             
-                
+            
             
             Spacer()
             
